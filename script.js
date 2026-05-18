@@ -66,31 +66,6 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 counters.forEach(el => counterObserver.observe(el));
 
-// ========== CONTACT FORM ==========
-const contactForm = document.getElementById('contactForm');
-const formFeedback = document.getElementById('formFeedback');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const btn = document.getElementById('submitBtn');
-    btn.disabled = true;
-    btn.textContent = 'A enviar...';
-
-    // Simulate form submission
-    setTimeout(() => {
-        formFeedback.textContent = '✓ Mensagem enviada com sucesso! Entraremos em contacto em breve.';
-        formFeedback.className = 'form-feedback success';
-        contactForm.reset();
-        btn.disabled = false;
-        btn.innerHTML = 'Enviar Mensagem <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
-
-        setTimeout(() => {
-            formFeedback.textContent = '';
-            formFeedback.className = 'form-feedback';
-        }, 5000);
-    }, 1200);
-});
 
 // ========== SMOOTH SCROLL (fallback) ==========
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
