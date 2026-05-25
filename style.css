@@ -38,6 +38,34 @@ img { max-width: 100%; display: block; }
 ul { list-style: none; }
 button { border: none; cursor: pointer; font-family: inherit; }
 
+/* Accessibility & Focus-visible styles */
+*:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
+}
+
+/* Skip link styling */
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 0 0 var(--radius) var(--radius);
+    z-index: 9999;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: top 0.2s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: none;
+}
+
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 .section { padding: 120px 0; position: relative; }
@@ -625,8 +653,12 @@ button { border: none; cursor: pointer; font-family: inherit; }
 .footer-bottom p { font-size: 0.82rem; color: var(--text-dim); }
 
 /* ========== ANIMATIONS ========== */
-[data-animate] { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-[data-animate].visible { opacity: 1; transform: translateY(0); }
+/* Fallback: without JS, all content is fully visible */
+[data-animate] { opacity: 1; transform: none; }
+
+/* Only hide elements when JS is confirmed ready — prevents "indexed without content" */
+html.js-ready [data-animate] { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+html.js-ready [data-animate].visible { opacity: 1; transform: translateY(0); }
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 968px) {

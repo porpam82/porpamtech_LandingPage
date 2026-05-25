@@ -13,11 +13,12 @@
     <meta property="og:title" content="PorpamTech — Automação, IA & Desenvolvimento">
     <meta property="og:description" content="Soluções tecnológicas à medida para impulsionar o seu negócio. Automação, IA e desenvolvimento de software.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://porpamtech.com">
+    <meta property="og:url" content="https://porpamtech.com/">
+    <meta property="og:image" content="https://porpamtech.com/og-image.png">
     <meta property="og:locale" content="pt_PT">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://porpamtech.com">
+    <link rel="canonical" href="https://porpamtech.com/">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
@@ -35,8 +36,10 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "PorpamTech",
-        "url": "https://porpamtech.com",
+        "url": "https://porpamtech.com/",
+        "logo": "https://porpamtech.com/logo.png",
         "description": "Especialistas em automação, inteligência artificial e desenvolvimento de software.",
+        "areaServed": "PT",
         "contactPoint": {
             "@type": "ContactPoint",
             "email": "info@porpamtech.com",
@@ -44,12 +47,20 @@
         }
     }
     </script>
+
+    <!-- Noscript fallback: ensures content is visible to crawlers -->
+    <noscript>
+        <style>
+            [data-animate] { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Saltar para o conteúdo principal</a>
     <!-- ==================== NAVBAR ==================== -->
     <nav class="navbar" id="navbar">
         <div class="container navbar-inner">
-            <a href="#" class="logo" aria-label="PorpamTech Home">
+            <a href="/" class="logo" aria-label="PorpamTech Home">
                 <span class="logo-icon">⚡</span>
                 <span class="logo-text">Porpam<span class="logo-accent">Tech</span></span>
             </a>
@@ -64,6 +75,8 @@
             </button>
         </div>
     </nav>
+
+    <main id="main-content">
 
     <!-- ==================== HERO ==================== -->
     <section class="hero" id="hero">
@@ -88,7 +101,7 @@
             <div class="hero-actions" data-animate="fade-up" data-delay="300">
                 <a href="#contacto" class="btn btn-primary">
                     Fale Connosco
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
                 <a href="#servicos" class="btn btn-ghost">
                     Explorar Serviços
@@ -96,17 +109,17 @@
             </div>
             <div class="hero-stats" data-animate="fade-up" data-delay="400">
                 <div class="stat">
-                    <span class="stat-number" data-count="50">0</span><span class="stat-plus">+</span>
+                    <span class="stat-number" data-count="50">50</span><span class="stat-plus">+</span>
                     <span class="stat-label">Projetos Entregues</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat">
-                    <span class="stat-number" data-count="30">0</span><span class="stat-plus">+</span>
+                    <span class="stat-number" data-count="30">30</span><span class="stat-plus">+</span>
                     <span class="stat-label">Clientes Satisfeitos</span>
                 </div>
                 <div class="stat-divider"></div>
                 <div class="stat">
-                    <span class="stat-number" data-count="99">0</span><span class="stat-plus">%</span>
+                    <span class="stat-number" data-count="99">99</span><span class="stat-plus">%</span>
                     <span class="stat-label">Taxa de Satisfação</span>
                 </div>
             </div>
@@ -132,7 +145,7 @@
                 <!-- Automação -->
                 <div class="service-card" data-animate="fade-up" data-delay="0">
                     <div class="service-icon" style="--accent: #6366f1;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
                         </svg>
                     </div>
@@ -149,7 +162,7 @@
                 <div class="service-card featured" data-animate="fade-up" data-delay="100">
                     <div class="card-badge">Popular</div>
                     <div class="service-icon" style="--accent: #8b5cf6;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8.24 4.47A4 4 0 0 1 12 2"/><circle cx="12" cy="12" r="3"/><path d="M12 16v6"/><path d="M8 22h8"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/>
                         </svg>
                     </div>
@@ -165,7 +178,7 @@
                 <!-- Desenvolvimento -->
                 <div class="service-card" data-animate="fade-up" data-delay="200">
                     <div class="service-icon" style="--accent: #06b6d4;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
                         </svg>
                     </div>
@@ -181,7 +194,7 @@
                 <!-- Consultoria -->
                 <div class="service-card" data-animate="fade-up" data-delay="300">
                     <div class="service-icon" style="--accent: #10b981;">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/>
                         </svg>
                     </div>
@@ -270,18 +283,18 @@
                 <div class="contact-info" data-animate="fade-up">
                     <div class="contact-card">
                         <div class="contact-icon">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
                             </svg>
                         </div>
                         <div>
                             <strong>Email</strong>
-                            <a href="mailto:paulosamorgado@gmail.com">info@porpamtech.com</a>
+                            <a href="mailto:info@porpamtech.com">info@porpamtech.com</a>
                         </div>
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
                             </svg>
                         </div>
@@ -292,7 +305,7 @@
                     </div>
                     <div class="contact-card">
                         <div class="contact-icon">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                             </svg>
                         </div>
@@ -332,7 +345,7 @@
                 </div>
                 <div class="privacy-block">
                     <h3>5. Direitos do Titular</h3>
-                    <p>Tem direito a aceder, retificar, apagar, limitar ou opor-se ao tratamento dos seus dados pessoais. Para exercer estes direitos, contacte-nos através do email <a href="mailto:paulosamorgado@gmail.com" class="link">info@porpamtech.com</a>.</p>
+                    <p>Tem direito a aceder, retificar, apagar, limitar ou opor-se ao tratamento dos seus dados pessoais. Para exercer estes direitos, contacte-nos através do email <a href="mailto:info@porpamtech.com" class="link">info@porpamtech.com</a>.</p>
                 </div>
                 <div class="privacy-block">
                     <h3>6. Segurança</h3>
@@ -343,12 +356,14 @@
         </div>
     </section>
 
+    </main>
+
     <!-- ==================== FOOTER ==================== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="#" class="logo">
+                    <a href="/" class="logo">
                         <span class="logo-icon">⚡</span>
                         <span class="logo-text">Porpam<span class="logo-accent">Tech</span></span>
                     </a>

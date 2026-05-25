@@ -1,3 +1,6 @@
+// ========== JS READY (enables CSS animations only when JS is active) ==========
+document.documentElement.classList.add('js-ready');
+
 // ========== NAVBAR SCROLL ==========
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
