@@ -80,3 +80,78 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ========== SCROLL SPY (active nav link) ==========
+const sections = document.querySelectorAll('section[id]');
+const navItems = document.querySelectorAll('.nav-links a');
+
+function updateActiveNav() {
+    const scrollY = window.scrollY + 120;
+    sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+        if (scrollY >= top && scrollY < top + height) {
+            navItems.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + id) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
+
+// ========== BACK TO TOP ==========
+const backToTop = document.getElementById('backToTop');
+
+if (backToTop) {
+    window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('visible', window.scrollY > 500);
+    }, { passive: true });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// ========== CONTACT FORM ==========
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById('cf-name').value.trim();
+        const email = document.getElementById('cf-email').value.trim();
+        const subject = document.getElementById('cf-subject').value.trim();
+        const message = document.getElementById('cf-message').value.trim();
+
+        // Basic validation
+        if (!name || !email || !subject || !message) {
+            formStatus.textContent = 'Por favor, preencha todos os campos.';
+            formStatus.className = 'form-status error';
+            return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            formStatus.textContent = 'Por favor, introduza um email válido.';
+            formStatus.className = 'form-status error';
+            return;
+        }
+
+        // Build mailto link
+        const body = `Nome: ${name}\nEmail: ${email}\n\n${message}`;
+        const mailto = `mailto:info@porpamtech.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
+
+        formStatus.textContent = 'A abrir o seu cliente de email...';
+        formStatus.className = 'form-status success';
+    });
+}
