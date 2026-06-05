@@ -1,1 +1,3 @@
 .antigravitycli/
+.wrangler/
+node_modules/
