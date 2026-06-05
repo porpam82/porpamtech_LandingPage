@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
@@ -18,6 +18,8 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
+  const closeMenu = useCallback(() => setIsOpen(false), [])
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
@@ -25,6 +27,17 @@ export default function Navigation() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  useEffect(() => {
+    if (!isOpen) return
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeMenu()
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [isOpen, closeMenu])
 
   return (
     <motion.nav
@@ -72,7 +85,8 @@ export default function Navigation() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-gray-300 hover:text-white"
-            aria-label="Menu"
+            aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={isOpen}
           >
             <div className="w-6 h-5 relative flex flex-col justify-between">
               <motion.span
@@ -100,6 +114,9 @@ export default function Navigation() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Menu de navegacao"
             className="md:hidden bg-gray-950/95 backdrop-blur-xl border-b border-white/10 overflow-hidden"
           >
             <div className="px-6 py-4 space-y-1">

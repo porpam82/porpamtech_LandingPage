@@ -1,9 +1,26 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import SectionWrapper from './SectionWrapper'
 
 export default function Contact() {
+  const [submitted, setSubmitted] = useState(false)
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    const form = e.currentTarget
+    const name = (form.elements.namedItem('name') as HTMLInputElement)?.value || ''
+    const email = (form.elements.namedItem('email') as HTMLInputElement)?.value || ''
+    const company = (form.elements.namedItem('company') as HTMLInputElement)?.value || ''
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value || ''
+
+    const subject = encodeURIComponent(`Contacto de ${name}${company ? ` - ${company}` : ''}`)
+    const body = encodeURIComponent(`Nome: ${name}\nEmail: ${email}\nEmpresa: ${company}\n\nMensagem:\n${message}`)
+    window.location.href = `mailto:info@porpamtech.com?subject=${subject}&body=${body}`
+    setSubmitted(true)
+  }
+
   return (
     <SectionWrapper id="contacto">
       <div className="grid lg:grid-cols-2 gap-16">
@@ -93,12 +110,13 @@ export default function Contact() {
           transition={{ delay: 0.2 }}
           className="glass-strong p-8"
         >
-          <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-5" onSubmit={handleSubmit}>
             <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label className="block text-sm text-gray-400 mb-2">Nome</label>
                 <input
                   type="text"
+                  name="name"
                   placeholder="O seu nome"
                   className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/25 transition-all"
                 />
@@ -107,6 +125,7 @@ export default function Contact() {
                 <label className="block text-sm text-gray-400 mb-2">Email</label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="email@exemplo.com"
                   className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/25 transition-all"
                 />
@@ -116,6 +135,7 @@ export default function Contact() {
               <label className="block text-sm text-gray-400 mb-2">Empresa</label>
               <input
                 type="text"
+                name="company"
                 placeholder="Nome da empresa"
                 className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/25 transition-all"
               />
@@ -124,6 +144,7 @@ export default function Contact() {
               <label className="block text-sm text-gray-400 mb-2">Mensagem</label>
               <textarea
                 rows={5}
+                name="message"
                 placeholder="Descreva o seu projecto..."
                 className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-600 focus:outline-none focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/25 transition-all resize-none"
               />
@@ -134,6 +155,16 @@ export default function Contact() {
             >
               Enviar Mensagem
             </button>
+            {submitted && (
+              <p className="text-sm text-teal-400 text-center mt-3">
+                O seu cliente de email foi aberto. Caso não tenha funcionado, envie directamente para{' '}
+                <a href="mailto:info@porpamtech.com" className="underline hover:text-teal-300">info@porpamtech.com</a>
+              </p>
+            )}
+            <p className="text-xs text-gray-500 text-center">
+              Ou envie directamente para{' '}
+              <a href="mailto:info@porpamtech.com" className="text-purple-400 hover:text-purple-300 underline">info@porpamtech.com</a>
+            </p>
           </form>
         </motion.div>
       </div>

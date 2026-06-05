@@ -2,29 +2,10 @@
 
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
 
 const SplineScene = dynamic(() => import('./SplineScene'), {
   ssr: false,
 })
-
-function SplineFallback() {
-  return (
-    <motion.div
-      className="w-64 h-64 md:w-96 md:h-96 rounded-full bg-gradient-to-br from-purple-600/30 via-blue-500/20 to-teal-400/10 blur-3xl"
-      animate={{
-        scale: [1, 1.2, 1],
-        rotate: [0, 180, 360],
-        opacity: [0.3, 0.6, 0.3],
-      }}
-      transition={{
-        duration: 10,
-        repeat: Infinity,
-        ease: 'easeInOut',
-      }}
-    />
-  )
-}
 
 export default function Hero() {
   return (
@@ -117,9 +98,7 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 1 }}
             className="hidden lg:flex items-center justify-center h-[500px]"
           >
-            <Suspense fallback={<SplineFallback />}>
-              <SplineScene />
-            </Suspense>
+            <SplineScene />
           </motion.div>
         </div>
       </div>

@@ -1,0 +1,30 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="50%" style="stop-color:#1a0533"/>
+      <stop offset="100%" style="stop-color:#0a1628"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9333ea"/>
+      <stop offset="100%" style="stop-color:#2dd4bf"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a855f7"/>
+      <stop offset="50%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#2dd4bf"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="900" cy="300" r="200" fill="#9333ea" opacity="0.08"/>
+  <circle cx="300" cy="400" r="150" fill="#3b82f6" opacity="0.06"/>
+  <rect x="80" y="540" width="1040" height="3" fill="url(#accent)" opacity="0.3" rx="1.5"/>
+  <rect x="80" y="120" width="50" height="50" rx="12" fill="url(#accent)"/>
+  <text x="115" y="155" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">P</text>
+  <text x="145" y="152" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">PorpamTech</text>
+  <text x="80" y="290" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="url(#textGrad)">Automacao, Inteligencia</text>
+  <text x="80" y="360" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white">Artificial e Software</text>
+  <text x="80" y="430" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="white">a Medida</text>
+  <text x="80" y="490" font-family="Arial, sans-serif" font-size="20" fill="#9ca3af">Solucoes premium de tecnologia para empresas inovadoras</text>
+  <text x="80" y="580" font-family="Arial, sans-serif" font-size="16" fill="#6b7280">porpamtech.com</text>
+</svg>
