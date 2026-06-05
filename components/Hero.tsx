@@ -56,7 +56,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white/5 border border-white/10 text-sm text-gray-400"
             >
               <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
-              Inovacao em Tecnologia
+              Inovação em Tecnologia
             </motion.div>
 
             <motion.h1
@@ -66,15 +66,15 @@ export default function Hero() {
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6"
             >
               <span className="gradient-text">
-                {'\u0041\u0075\u0074\u006F\u006D\u0061\u00E7\u00E3\u006F'}
+                Automação
               </span>
               ,{' '}
               <span className="text-white">
-                {`Intelig\u00EAncia Artificial`}
+                Inteligência Artificial
               </span>{' '}
               <span className="text-gray-400">e</span>{' '}
               <span className="text-white">
-                {`Software \u00E0 Medida`}
+                Software à Medida
               </span>
             </motion.h1>
 
@@ -84,8 +84,8 @@ export default function Hero() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-lg md:text-xl text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0"
             >
-              Transformamos a sua empresa com {`solu\u00E7\u00F5es`} tecnol{'\u00F3'}gicas de ponta.
-              Da {`automa\u00E7\u00E3o`} inteligente ao desenvolvimento personalizado, elevamos o seu {`neg\u00F3`}cio.
+              Transformamos a sua empresa com soluções tecnológicas de ponta.
+              Da automação inteligente ao desenvolvimento personalizado, elevamos o seu negócio.
             </motion.p>
 
             <motion.div
@@ -105,7 +105,7 @@ export default function Hero() {
                 href="#servicos"
                 className="px-8 py-4 text-base font-medium text-gray-300 rounded-full border border-white/10 hover:bg-white/5 hover:text-white hover:border-white/20 transition-all"
               >
-                {`Ver Servi\u00E7os`}
+                Ver Serviços
               </a>
             </motion.div>
           </motion.div>

@@ -11,20 +11,20 @@ const techStack = [
 
 const features = [
   {
-    title: 'Arquitectura Escalavel',
-    description: 'Sistemas desenhados para crescer com o seu negocio, suportando milhares de utilizadores.',
+    title: 'Arquitectura Escalável',
+    description: 'Sistemas desenhados para crescer com o seu negócio, suportando milhares de utilizadores.',
   },
   {
-    title: 'Codigo de Qualidade',
-    description: 'Desenvolvimento com as melhores praticas, testes automatizados e documentacao completa.',
+    title: 'Código de Qualidade',
+    description: 'Desenvolvimento com as melhores práticas, testes automatizados e documentação completa.',
   },
   {
-    title: 'Entrega Continua',
-    description: 'Pipelines de CI/CD que garantem deploys seguros e rapidos em producao.',
+    title: 'Entrega Contínua',
+    description: 'Pipelines de CI/CD que garantem deploys seguros e rápidos em produção.',
   },
   {
     title: 'Suporte Dedicado',
-    description: 'Equipa dedicada disponivel para manutencao, actualizacoes e suporte tecnico continuo.',
+    description: 'Equipa dedicada disponível para manutenção, actualizações e suporte técnico contínuo.',
   },
 ]
 
@@ -75,7 +75,7 @@ export default function CustomSoftware() {
             viewport={{ once: true }}
             className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-blue-300 bg-blue-500/10 border border-blue-500/20 rounded-full"
           >
-            {`Software \u00E0 Medida`}
+            Software à Medida
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -84,7 +84,7 @@ export default function CustomSoftware() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
           >
-            {`Solu\u00E7\u00F5es`}{' '}
+            Soluções{' '}
             <span className="gradient-text">Personalizadas</span>
           </motion.h2>
           <motion.p
@@ -94,7 +94,7 @@ export default function CustomSoftware() {
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-lg mb-8"
           >
-            Cada negocio e unico. Desenvolvemos software totalmente personalizado
+            Cada negócio é único. Desenvolvemos software totalmente personalizado
             que se adapta perfeitamente aos seus processos e objectivos.
           </motion.p>
 

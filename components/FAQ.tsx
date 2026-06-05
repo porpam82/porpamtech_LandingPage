@@ -7,27 +7,27 @@ import SectionWrapper from './SectionWrapper'
 const faqs = [
   {
     question: 'Quanto tempo demora o desenvolvimento de um projeto?',
-    answer: 'O prazo depende da complexidade do projecto. Projectos simples podem ser entregues em 4-6 semanas, enquanto solucoes mais complexas podem levar 3-6 meses. Na fase de descoberta, definimos um cronograma detalhado e realista.',
+    answer: 'O prazo depende da complexidade do projecto. Projectos simples podem ser entregues em 4-6 semanas, enquanto soluções mais complexas podem levar 3-6 meses. Na fase de descoberta, definimos um cronograma detalhado e realista.',
   },
   {
-    question: 'Que tipo de suporte oferecem apos a entrega?',
-    answer: 'Oferecemos planos de suporte continuo que incluem manutencao preventiva, correcao de bugs, actualizacoes de seguranca e suporte tecnico dedicado. Garantimos que o seu software funciona sempre na perfeicao.',
+    question: 'Que tipo de suporte oferecem após a entrega?',
+    answer: 'Oferecemos planos de suporte contínuo que incluem manutenção preventiva, correção de bugs, actualizações de segurança e suporte técnico dedicado. Garantimos que o seu software funciona sempre na perfeição.',
   },
   {
-    question: 'Trabalham com empresas de qualquer dimensao?',
-    answer: 'Sim, trabalhamos com startups, PMEs e grandes empresas. Adaptamos a nossa abordagem e solucoes as necessidades especificas de cada cliente, independentemente da dimensao.',
+    question: 'Trabalham com empresas de qualquer dimensão?',
+    answer: 'Sim, trabalhamos com startups, PMEs e grandes empresas. Adaptamos a nossa abordagem e soluções às necessidades específicas de cada cliente, independentemente da dimensão.',
   },
   {
-    question: 'Como funciona o processo de orcamentacao?',
-    answer: 'Apos a reuniao inicial de descoberta, apresentamos uma proposta detalhada com escopo, cronograma e investimento. Trabalhamos com precos fixos para projectos bem definidos ou time & materials para projectos mais flexiveis.',
+    question: 'Como funciona o processo de orçamentação?',
+    answer: 'Após a reunião inicial de descoberta, apresentamos uma proposta detalhada com escopo, cronograma e investimento. Trabalhamos com preços fixos para projectos bem definidos ou time & materials para projectos mais flexíveis.',
   },
   {
     question: 'Que tecnologias utilizam?',
-    answer: 'Utilizamos as tecnologias mais modernas e adequadas a cada projecto: React, Next.js, Node.js, Python, TypeScript, PostgreSQL, MongoDB, AWS, Google Cloud, entre outras. A escolha depende sempre dos requisitos especificos.',
+    answer: 'Utilizamos as tecnologias mais modernas e adequadas a cada projecto: React, Next.js, Node.js, Python, TypeScript, PostgreSQL, MongoDB, AWS, Google Cloud, entre outras. A escolha depende sempre dos requisitos específicos.',
   },
   {
-    question: 'Como garantem a seguranca dos dados?',
-    answer: 'Seguimos as melhores praticas de ciberseguranca, incluindo encriptacao de dados, autenticacao robusta, auditorias regulares e conformidade com RGPD. A seguranca e uma prioridade em todos os nossos projectos.',
+    question: 'Como garantem a segurança dos dados?',
+    answer: 'Seguimos as melhores práticas de cibersegurança, incluindo encriptação de dados, autenticação robusta, auditorias regulares e conformidade com RGPD. A segurança é uma prioridade em todos os nossos projectos.',
   },
 ]
 
@@ -78,8 +78,25 @@ function FAQItem({ question, answer, isOpen, onClick }: {
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+
   return (
     <SectionWrapper id="faq">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <motion.span
@@ -107,7 +124,7 @@ export default function FAQ() {
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-lg"
           >
-            Encontre respostas para as questoes mais comuns sobre os nossos servicos.
+            Encontre respostas para as questões mais comuns sobre os nossos serviços.
           </motion.p>
         </div>
 

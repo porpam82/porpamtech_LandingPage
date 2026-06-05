@@ -11,17 +11,17 @@ const capabilities = [
   },
   {
     title: 'Processamento de Dados',
-    description: 'Agentes que analisam grandes volumes de dados, extraem insights e geram relatorios automaticamente.',
+    description: 'Agentes que analisam grandes volumes de dados, extraem insights e geram relatórios automaticamente.',
     icon: '📊',
   },
   {
-    title: 'Automacao Cognitiva',
-    description: 'IA que aprende com os seus processos e toma decisoes inteligentes de forma autonoma.',
+    title: 'Automação Cognitiva',
+    description: 'IA que aprende com os seus processos e toma decisões inteligentes de forma autónoma.',
     icon: '🧠',
   },
   {
-    title: 'Integracao Multi-Sistema',
-    description: 'Agentes que conectam e orquestram multiplos sistemas, APIs e bases de dados sem intervencao humana.',
+    title: 'Integração Multi-Sistema',
+    description: 'Agentes que conectam e orquestram múltiplos sistemas, APIs e bases de dados sem intervenção humana.',
     icon: '🔗',
   },
 ]
@@ -48,7 +48,7 @@ export default function AIAgents() {
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
           >
             Agentes de IA{' '}
-            <span className="gradient-text">Autonomos</span>
+            <span className="gradient-text">Autónomos</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -57,7 +57,7 @@ export default function AIAgents() {
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-lg mb-8"
           >
-            Desenvolvemos agentes de inteligencia artificial que trabalham 24/7, aprendem com cada interacao
+            Desenvolvemos agentes de inteligência artificial que trabalham 24/7, aprendem com cada interação
             e evoluem continuamente para oferecer resultados cada vez melhores.
           </motion.p>
 
@@ -74,11 +74,11 @@ export default function AIAgents() {
             </div>
             <div>
               <div className="text-3xl font-bold gradient-text">50x</div>
-              <div className="text-sm text-gray-500">Mais rapido</div>
+              <div className="text-sm text-gray-500">Mais rápido</div>
             </div>
             <div>
               <div className="text-3xl font-bold gradient-text">24/7</div>
-              <div className="text-sm text-gray-500">Disponivel</div>
+              <div className="text-sm text-gray-500">Disponível</div>
             </div>
           </motion.div>
         </div>

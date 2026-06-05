@@ -15,6 +15,20 @@ html {
 
 body {
   @apply bg-gray-950 text-gray-100 antialiased;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+  line-height: 1.1;
+}
+
+h1, h2 {
+  letter-spacing: -0.02em;
+}
+
+p {
+  line-height: 1.7;
 }
 
 @layer components {
@@ -56,6 +70,9 @@ body {
   }
   .animation-delay-600 {
     animation-delay: 600ms;
+  }
+  .text-balance {
+    text-wrap: balance;
   }
 }
 

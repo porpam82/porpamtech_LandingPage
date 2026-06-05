@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
-  { href: '#servicos', label: 'Servicos' },
+  { href: '#servicos', label: 'Serviços' },
   { href: '#ai-agents', label: 'AI Agents' },
-  { href: '#automacao', label: 'Automacao' },
+  { href: '#automacao', label: 'Automação' },
   { href: '#software', label: 'Software' },
-  { href: '#portfolio', label: 'Portfolio' },
+  { href: '#portfolio', label: 'Portfólio' },
   { href: '#processo', label: 'Processo' },
   { href: '#faq', label: 'FAQ' },
   { href: '#contacto', label: 'Contacto' },
@@ -65,7 +65,7 @@ export default function Navigation() {
             href="#contacto"
             className="hidden md:inline-flex px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-blue-600 rounded-full hover:from-purple-500 hover:to-blue-500 transition-all hover:shadow-lg hover:shadow-purple-500/25"
           >
-            Comecar
+            Começar
           </a>
 
           {/* Mobile Menu Button */}
@@ -118,7 +118,7 @@ export default function Navigation() {
                 onClick={() => setIsOpen(false)}
                 className="block mt-4 px-4 py-3 text-center font-medium text-white bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"
               >
-                Comecar
+                Começar
               </a>
             </div>
           </motion.div>

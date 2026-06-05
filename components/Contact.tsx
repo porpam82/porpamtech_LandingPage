@@ -34,7 +34,7 @@ export default function Contact() {
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-lg mb-10"
           >
-            Pronto para transformar o seu negocio? Entre em contacto connosco e descubra como podemos ajudar.
+            Pronto para transformar o seu negócio? Entre em contacto connosco e descubra como podemos ajudar.
           </motion.p>
 
           <motion.div
@@ -78,7 +78,7 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <p className="text-sm text-gray-500">{`Localiza\u00E7\u00E3o`}</p>
+                <p className="text-sm text-gray-500">Localização</p>
                 <span className="text-white">Portugal</span>
               </div>
             </div>

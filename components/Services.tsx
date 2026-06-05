@@ -11,7 +11,7 @@ const services = [
       </svg>
     ),
     title: 'Desenvolvimento Web',
-    description: 'Aplicacoes web modernas e responsivas com as tecnologias mais recentes do mercado.',
+    description: 'Aplicações web modernas e responsivas com as tecnologias mais recentes do mercado.',
     gradient: 'from-purple-500 to-blue-500',
   },
   {
@@ -20,8 +20,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
       </svg>
     ),
-    title: 'Inteligencia Artificial',
-    description: 'Solucoes de IA personalizadas que automatizam processos e geram insights valiosos.',
+    title: 'Inteligência Artificial',
+    description: 'Soluções de IA personalizadas que automatizam processos e geram insights valiosos.',
     gradient: 'from-blue-500 to-cyan-500',
   },
   {
@@ -30,7 +30,7 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
       </svg>
     ),
-    title: 'Automacao de Processos',
+    title: 'Automação de Processos',
     description: 'Workflows automatizados que eliminam tarefas repetitivas e aumentam a produtividade.',
     gradient: 'from-teal-500 to-green-500',
   },
@@ -40,8 +40,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
       </svg>
     ),
-    title: 'Aplicacoes Mobile',
-    description: 'Apps nativos e multiplataforma com experiencias de utilizador excepcionais.',
+    title: 'Aplicações Mobile',
+    description: 'Apps nativos e multiplataforma com experiências de utilizador excepcionais.',
     gradient: 'from-orange-500 to-pink-500',
   },
   {
@@ -51,7 +51,7 @@ const services = [
       </svg>
     ),
     title: 'Cloud & DevOps',
-    description: 'Infraestrutura escalavel e pipelines de CI/CD para entregas continuas e confiaveis.',
+    description: 'Infraestrutura escalável e pipelines de CI/CD para entregas contínuas e confiáveis.',
     gradient: 'from-indigo-500 to-purple-500',
   },
   {
@@ -60,8 +60,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    title: 'Ciberseguranca',
-    description: 'Protecao avancada dos seus sistemas e dados com as melhores praticas de seguranca.',
+    title: 'Cibersegurança',
+    description: 'Proteção avançada dos seus sistemas e dados com as melhores práticas de segurança.',
     gradient: 'from-red-500 to-orange-500',
   },
 ]
@@ -95,7 +95,7 @@ export default function Services() {
           viewport={{ once: true }}
           className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-purple-300 bg-purple-500/10 border border-purple-500/20 rounded-full"
         >
-          Servicos
+          Serviços
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ export default function Services() {
           transition={{ delay: 0.1 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
         >
-          {`Solu\u00E7\u00F5es`} que{' '}
+          Soluções que{' '}
           <span className="gradient-text">Transformam</span>
         </motion.h2>
         <motion.p
@@ -114,7 +114,7 @@ export default function Services() {
           transition={{ delay: 0.2 }}
           className="text-gray-400 text-lg max-w-2xl mx-auto"
         >
-          Oferecemos um conjunto completo de servicos tecnologicos para impulsionar o crescimento do seu negocio.
+          Oferecemos um conjunto completo de serviços tecnológicos para impulsionar o crescimento do seu negócio.
         </motion.p>
       </div>
 

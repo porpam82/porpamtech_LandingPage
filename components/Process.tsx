@@ -7,25 +7,25 @@ const steps = [
   {
     number: '01',
     title: 'Descoberta',
-    description: 'Analisamos o seu negocio, identificamos desafios e definimos objectivos claros para o projecto.',
+    description: 'Analisamos o seu negócio, identificamos desafios e definimos objectivos claros para o projecto.',
     color: 'from-purple-500 to-purple-600',
   },
   {
     number: '02',
     title: 'Design',
-    description: 'Criamos prototipos e arquitectamos a solucao ideal, validando cada decisao consigo.',
+    description: 'Criamos protótipos e arquitectamos a solução ideal, validando cada decisão consigo.',
     color: 'from-blue-500 to-blue-600',
   },
   {
     number: '03',
     title: 'Desenvolvimento',
-    description: 'Construimos a solucao com metodologias ageis, mantendo-o informado em cada sprint.',
+    description: 'Construímos a solução com metodologias ágeis, mantendo-o informado em cada sprint.',
     color: 'from-cyan-500 to-cyan-600',
   },
   {
     number: '04',
     title: 'Entrega',
-    description: 'Lancamos, monitorizamos e optimizamos continuamente para garantir resultados excepcionais.',
+    description: 'Lançamos, monitorizamos e optimizamos continuamente para garantir resultados excepcionais.',
     color: 'from-teal-500 to-teal-600',
   },
 ]

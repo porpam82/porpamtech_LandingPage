@@ -5,19 +5,19 @@ import { motion } from 'framer-motion'
 const footerLinks = {
   servicos: [
     { label: 'Desenvolvimento Web', href: '#servicos' },
-    { label: 'Inteligencia Artificial', href: '#ai-agents' },
-    { label: 'Automacao', href: '#automacao' },
-    { label: 'Software a Medida', href: '#software' },
+    { label: 'Inteligência Artificial', href: '#ai-agents' },
+    { label: 'Automação', href: '#automacao' },
+    { label: 'Software à Medida', href: '#software' },
   ],
   empresa: [
-    { label: 'Sobre Nos', href: '#' },
-    { label: 'Portfolio', href: '#portfolio' },
+    { label: 'Sobre Nós', href: '#' },
+    { label: 'Portfólio', href: '#portfolio' },
     { label: 'Processo', href: '#processo' },
     { label: 'Contacto', href: '#contacto' },
   ],
   legal: [
-    { label: 'Politica de Privacidade', href: '#' },
-    { label: 'Termos de Servico', href: '#' },
+    { label: 'Política de Privacidade', href: '#' },
+    { label: 'Termos de Serviço', href: '#' },
     { label: 'RGPD', href: '#' },
   ],
 }
@@ -40,7 +40,7 @@ export default function Footer() {
               <span className="text-white font-bold text-lg">PorpamTech</span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-6">
-              {`Solu\u00E7\u00F5es`} premium de {`automa\u00E7\u00E3o`}, {`intelig\u00EAncia`} artificial e desenvolvimento de software {`\u00E0`} medida.
+              Soluções premium de automação, inteligência artificial e desenvolvimento de software à medida.
             </p>
             {/* Social icons */}
             <div className="flex gap-3">
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">{`Servi\u00E7os`}</h4>
+            <h4 className="text-white font-semibold mb-4">Serviços</h4>
             <ul className="space-y-3">
               {footerLinks.servicos.map((link) => (
                 <li key={link.label}>

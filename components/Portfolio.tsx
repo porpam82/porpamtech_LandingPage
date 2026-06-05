@@ -6,8 +6,8 @@ import SectionWrapper from './SectionWrapper'
 const projects = [
   {
     title: 'Plataforma FinTech',
-    category: 'Software a Medida',
-    description: 'Sistema completo de gestao financeira com dashboards em tempo real e integracao bancaria.',
+    category: 'Software à Medida',
+    description: 'Sistema completo de gestão financeira com dashboards em tempo real e integração bancária.',
     tech: ['React', 'Node.js', 'PostgreSQL'],
     gradient: 'from-purple-600/20 to-blue-600/20',
   },
@@ -19,30 +19,30 @@ const projects = [
     gradient: 'from-blue-600/20 to-cyan-600/20',
   },
   {
-    title: 'Automacao Industrial',
-    category: 'Automacao',
-    description: 'Sistema de automacao de linha de producao com sensores IoT e monitorizacao remota.',
+    title: 'Automação Industrial',
+    category: 'Automação',
+    description: 'Sistema de automação de linha de produção com sensores IoT e monitorização remota.',
     tech: ['IoT', 'Python', 'AWS'],
     gradient: 'from-teal-600/20 to-green-600/20',
   },
   {
     title: 'E-Commerce Premium',
     category: 'Desenvolvimento Web',
-    description: 'Loja online de alto desempenho com recomendacoes personalizadas baseadas em IA.',
+    description: 'Loja online de alto desempenho com recomendações personalizadas baseadas em IA.',
     tech: ['Next.js', 'Stripe', 'MongoDB'],
     gradient: 'from-orange-600/20 to-pink-600/20',
   },
   {
-    title: 'Sistema de Logistica',
-    category: 'Software a Medida',
-    description: 'Plataforma de gestao logistica com rastreamento GPS e optimizacao de rotas em tempo real.',
+    title: 'Sistema de Logística',
+    category: 'Software à Medida',
+    description: 'Plataforma de gestão logística com rastreamento GPS e optimização de rotas em tempo real.',
     tech: ['React', 'Go', 'Redis'],
     gradient: 'from-indigo-600/20 to-purple-600/20',
   },
   {
-    title: 'Analise Preditiva',
-    category: 'Inteligencia Artificial',
-    description: 'Modelos de machine learning para previsao de vendas e analise de tendencias de mercado.',
+    title: 'Análise Preditiva',
+    category: 'Inteligência Artificial',
+    description: 'Modelos de machine learning para previsão de vendas e análise de tendências de mercado.',
     tech: ['TensorFlow', 'Python', 'BigQuery'],
     gradient: 'from-cyan-600/20 to-teal-600/20',
   },
@@ -58,7 +58,7 @@ export default function Portfolio() {
           viewport={{ once: true }}
           className="inline-block px-4 py-1.5 mb-4 text-sm font-medium text-indigo-300 bg-indigo-500/10 border border-indigo-500/20 rounded-full"
         >
-          Portfolio
+          Portfólio
         </motion.span>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -77,7 +77,7 @@ export default function Portfolio() {
           transition={{ delay: 0.2 }}
           className="text-gray-400 text-lg max-w-2xl mx-auto"
         >
-          Conhega alguns dos projetos que desenvolvemos para clientes em diferentes setores e industrias.
+          Conheça alguns dos projetos que desenvolvemos para clientes em diferentes setores e indústrias.
         </motion.p>
       </div>
 

@@ -15,13 +15,13 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'PorpamTech | Automacao, Inteligencia Artificial e Software a Medida',
+  title: 'PorpamTech | Automação, Inteligência Artificial e Software à Medida',
   description:
-    'A PorpamTech oferece solucoes premium de automacao, inteligencia artificial e desenvolvimento de software a medida para empresas que procuram inovacao e eficiencia.',
+    'A PorpamTech oferece soluções premium de automação, inteligência artificial e desenvolvimento de software à medida para empresas que procuram inovação e eficiência.',
   keywords: [
-    'automacao',
-    'inteligencia artificial',
-    'software a medida',
+    'automação',
+    'inteligência artificial',
+    'software à medida',
     'desenvolvimento web',
     'AI agents',
     'Portugal',
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     locale: 'pt_PT',
     url: 'https://porpamtech.com',
     siteName: 'PorpamTech',
-    title: 'PorpamTech | Automacao, Inteligencia Artificial e Software a Medida',
+    title: 'PorpamTech | Automação, Inteligência Artificial e Software à Medida',
     description:
-      'Solucoes premium de automacao, inteligencia artificial e desenvolvimento de software a medida.',
+      'Soluções premium de automação, inteligência artificial e desenvolvimento de software à medida.',
     images: [
       {
         url: 'https://porpamtech.com/og-image.png',
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'PorpamTech | Automacao, Inteligencia Artificial e Software a Medida',
+    title: 'PorpamTech | Automação, Inteligência Artificial e Software à Medida',
     description:
-      'Solucoes premium de automacao, inteligencia artificial e desenvolvimento de software a medida.',
+      'Soluções premium de automação, inteligência artificial e desenvolvimento de software à medida.',
     images: ['https://porpamtech.com/og-image.png'],
   },
   metadataBase: new URL('https://porpamtech.com'),
@@ -83,8 +83,61 @@ export default function RootLayout({
               url: 'https://porpamtech.com',
               email: 'info@porpamtech.com',
               description:
-                'Solucoes premium de automacao, inteligencia artificial e desenvolvimento de software a medida.',
+                'Soluções premium de automação, inteligência artificial e desenvolvimento de software à medida.',
               sameAs: [],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'ItemList',
+              itemListElement: [
+                {
+                  '@type': 'Service',
+                  position: 1,
+                  name: 'Desenvolvimento Web',
+                  description: 'Aplicações web modernas e responsivas com as tecnologias mais recentes do mercado.',
+                  provider: { '@type': 'Organization', name: 'PorpamTech' },
+                },
+                {
+                  '@type': 'Service',
+                  position: 2,
+                  name: 'Inteligência Artificial',
+                  description: 'Soluções de IA personalizadas que automatizam processos e geram insights valiosos.',
+                  provider: { '@type': 'Organization', name: 'PorpamTech' },
+                },
+                {
+                  '@type': 'Service',
+                  position: 3,
+                  name: 'Automação de Processos',
+                  description: 'Workflows automatizados que eliminam tarefas repetitivas e aumentam a produtividade.',
+                  provider: { '@type': 'Organization', name: 'PorpamTech' },
+                },
+                {
+                  '@type': 'Service',
+                  position: 4,
+                  name: 'Aplicações Mobile',
+                  description: 'Apps nativos e multiplataforma com experiências de utilizador excepcionais.',
+                  provider: { '@type': 'Organization', name: 'PorpamTech' },
+                },
+                {
+                  '@type': 'Service',
+                  position: 5,
+                  name: 'Cloud & DevOps',
+                  description: 'Infraestrutura escalável e pipelines de CI/CD para entregas contínuas e confiáveis.',
+                  provider: { '@type': 'Organization', name: 'PorpamTech' },
+                },
+                {
+                  '@type': 'Service',
+                  position: 6,
+                  name: 'Cibersegurança',
+                  description: 'Proteção avançada dos seus sistemas e dados com as melhores práticas de segurança.',
+                  provider: { '@type': 'Organization', name: 'PorpamTech' },
+                },
+              ],
             }),
           }}
         />
