@@ -48,7 +48,7 @@ export const metadata: Metadata = {
       'Soluções premium de automação, inteligência artificial e desenvolvimento de software à medida.',
     images: [
       {
-        url: 'https://porpamtech.com/og-image.svg',
+        url: 'https://porpamtech.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'PorpamTech - Tecnologia Premium',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: 'PorpamTech | Automação, Inteligência Artificial e Software à Medida',
     description:
       'Soluções premium de automação, inteligência artificial e desenvolvimento de software à medida.',
-    images: ['https://porpamtech.com/og-image.svg'],
+    images: ['https://porpamtech.com/og-image.png'],
   },
   metadataBase: new URL('https://porpamtech.com'),
 }

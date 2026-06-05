@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const navLinks = [
@@ -17,8 +17,13 @@ const navLinks = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const hamburgerRef = useRef<HTMLButtonElement>(null)
+  const menuRef = useRef<HTMLDivElement>(null)
 
-  const closeMenu = useCallback(() => setIsOpen(false), [])
+  const closeMenu = useCallback(() => {
+    setIsOpen(false)
+    hamburgerRef.current?.focus()
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,11 +33,36 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Move focus into menu when opened
+  useEffect(() => {
+    if (isOpen && menuRef.current) {
+      const firstLink = menuRef.current.querySelector<HTMLAnchorElement>('a')
+      firstLink?.focus()
+    }
+  }, [isOpen])
+
   useEffect(() => {
     if (!isOpen) return
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         closeMenu()
+        return
+      }
+      // Focus trap: cycle focus within menu panel
+      if (e.key === 'Tab' && menuRef.current) {
+        const focusables = menuRef.current.querySelectorAll<HTMLElement>(
+          'a[href], button, [tabindex]:not([tabindex="-1"])'
+        )
+        if (focusables.length === 0) return
+        const first = focusables[0]
+        const last = focusables[focusables.length - 1]
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
       }
     }
     document.addEventListener('keydown', handleKeyDown)
@@ -83,6 +113,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
+            ref={hamburgerRef}
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-gray-300 hover:text-white"
             aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
@@ -119,12 +150,12 @@ export default function Navigation() {
             aria-label="Menu de navegacao"
             className="md:hidden bg-gray-950/95 backdrop-blur-xl border-b border-white/10 overflow-hidden"
           >
-            <div className="px-6 py-4 space-y-1">
+            <div ref={menuRef} className="px-6 py-4 space-y-1">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeMenu}
                   className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
                 >
                   {link.label}
@@ -132,7 +163,7 @@ export default function Navigation() {
               ))}
               <a
                 href="#contacto"
-                onClick={() => setIsOpen(false)}
+                onClick={closeMenu}
                 className="block mt-4 px-4 py-3 text-center font-medium text-white bg-gradient-to-r from-purple-600 to-blue-600 rounded-full"
               >
                 Começar

@@ -1,0 +1,19 @@
+import sharp from 'sharp'
+import { readFileSync } from 'fs'
+import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const projectRoot = join(__dirname, '..')
+
+const svgPath = join(projectRoot, 'public', 'og-image.svg')
+const pngPath = join(projectRoot, 'public', 'og-image.png')
+
+const svgBuffer = readFileSync(svgPath)
+
+await sharp(svgBuffer)
+  .resize(1200, 630)
+  .png()
+  .toFile(pngPath)
+
+console.log('Generated public/og-image.png (1200x630)')
