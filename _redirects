@@ -1,3 +1,10 @@
-# Redirecionamento de páginas 404 antigas para a página inicial
-# Adicione aqui redirecionamentos específicos se necessário
-/* / 301
+# Cloudflare Pages serve automaticamente:
+#   - index.html na raiz (/)
+#   - 404.html para caminhos inexistentes
+#
+# NAO usar uma regra catch-all como "/* / 301": ela apanha a propria
+# home (/ corresponde a /*) e cria um LOOP INFINITO de redirects 301.
+#
+# Adicione aqui apenas redirecionamentos especificos de caminhos antigos,
+# por exemplo:
+#   /pagina-antiga  /nova-pagina  301
